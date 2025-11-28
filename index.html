@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simulação da Esteira - Atletic Dream</title>
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/script.js"></script>
+</head>
+<body>
+
+
+<h1 class="titulo">Ladder future - Simulação de Energia</h1>
+
+
+<div class="container">
+
+
+<div class="card">
+<h2>Painel de Ajustes</h2>
+
+
+<div class="item">
+<label>Velocidade (km/h)</label>
+<input type="range" id="velocidade" min="1" max="20" value="10">
+<span id="vel_valor" class="valor">10 km/h</span>
+</div>
+
+
+<div class="item">
+<label>Inclinação (%)</label>
+<input type="range" id="inclinacao" min="0" max="15" value="5">
+<span id="inc_valor" class="valor">5%</span>
+</div>
+
+
+<div class="item">
+<label>Duração (min)</label>
+<input type="range" id="duracao" min="5" max="120" value="30">
+<span id="dur_valor" class="valor">30 min</span>
+</div>
+
+
+<button id="salvar">Salvar Configurações</button>
+</div>
+
+
+<div class="imagem-box">
+<img src="c:\Users\Felipe\Downloads\esteira-3850-ol3r04f9vh.webp" alt="Esteira Atletic Dream">
+</div>
+
+
+</div>
+
+
+<div class="card resultado">
+<h2>Status da Esteira</h2>
+<p id="status">Aguardando configuração...</p>
+<p id="energia">Energia gerada: 0 Wh</p>
+
+
+<!-- Barra animada -->
+<div class="barra-container">
+<div id="barraProgresso"></div>
+</div>
+
+
+<!-- Bateria visual -->
+<div class="bateria">
+<div id="bateriaNivel"></div>
+</div>
+<!-- Botão de abrir/fechar -->
+<div id="toggleSidebar" class="toggle-btn">☰</div>
+
+<!-- Sidebar retrátil (começa fechada) -->
+<div class="sidebar closed" id="sidebar">
+    <h1>.</h1>
+    <ul>
+        <li>Velocidade</li>
+        <li>Inclinação</li>
+        <li>Modo Eco</li>
+        <li>Sessão de Treino</li>
+        <li>Relatórios</li>
+    </ul>
+</div>
+
+
+</html>

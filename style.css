@@ -1,0 +1,136 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+background: #111;
+color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding-top: 40px;
+}
+
+
+.titulo {
+color: #ff6600;
+margin-bottom: 25px;
+text-align: center;
+}
+
+
+.container {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 30px;
+}
+
+
+.card {
+background: #1a1a1a;
+width: 350px;
+padding: 20px;
+border-radius: 15px;
+box-shadow: 0 0 10px #000;
+margin-bottom: 30px;
+}
+
+
+.card h2, h3 {
+color: #ff6600;
+}
+
+
+.item { margin-bottom: 20px; }
+
+
+.item label { display: block; margin-bottom: 5px; }
+
+
+.valor { color: #ff6600; font-weight: bold; }
+
+
+button {
+width: 100%; padding: 12px;
+background: #ff6600; border: none;
+color: white; font-size: 16px;
+border-radius: 10px; cursor: pointer;
+}
+/* BOTÃO */
+.toggle-btn {
+    position: fixed;
+    left: 10px;
+    top: 15px;
+    font-size: 26px;
+    color: #ff6600;
+    cursor: pointer;
+    z-index: 999;
+    background: #111;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #ff6600;
+    transition: 0.3s;
+}
+
+.toggle-btn:hover {
+    background: #ff6600;
+    color: #000;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 230px;
+    height: 90vh;
+    background: #111;
+    color: white;
+    padding: 20px;
+    box-shadow: 3px 0 10px rgba(255, 115, 0, 0.3);
+    border-right: 2px solid #ff6600;
+    font-family: Arial, sans-serif;
+     transition: 0.35s;     /* animação */
+    overflow: hidden;
+}
+
+/* Estado minimizado */
+.sidebar.closed {
+    width: 0;
+    padding: 20px 0;
+    border-right: none;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+    color: #ff6600;
+    text-transform: uppercase;
+    font-size: 22px;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.sidebar.closed h2,
+.sidebar.closed ul li {
+    opacity: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 12px 0;
+    padding: 10px;
+    background: #1a1a1a;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 6px;
+}
+
+.sidebar ul li:hover {
+    background: #ff6600;
+    color: #000;
+    border-left: 4px solid #fff;
+}
